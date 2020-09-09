@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Practica Vue</title>
+</head>
+<body>
+
+    <div id="app" class="container mt-5">
+
+        <!--<div :class="['p-3','text-white',fondo]">-->
+        <div class="text-white p-3" :class="{'bg-info': color,'bg-success' : !color}">
+
+            <p> La historia del Club Universidad de Chile posee antecedentes que se remontan a fines del siglo XIX y albores del siglo XX, 
+            pasando posteriormente por distintos hitos fundacionales como resultado de la aspiración de exestudiantes del 
+            Internado Nacional Barros Arana (INBA) de formar un club de fútbol estudiantil, que compitiera en las ligas oficiales de Santiago, 
+            y luego formar un club deportivo universitario.</p>
+
+        </div>
+        <button class="btn btn-primary" @click="color =!color">Cambiar</button>
+
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="07.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+
+    
+    
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <label for="">Nombre: </label>
+        <input type="text" v-model="nuevoNombre" v-on:keyup.enter="agregarPersona" >
+        <!--<label for="">Edad: </label>
+        <input type="text" v-model="nuevaEdad">-->
+        <button @click="agregarPersona">Agregar</button>
+        <ul>
+            <li v-for="nombre of nombres">
+                {{nombre.nom}} : <input type="number" v-model.number="nombre.edad" >
+                <span v-if="nombre.edad>=18"> - Mayor de edad</span>
+                <!--<span v-if="nombre.edad>=50"> - Papas</span>
+                <span v-if="nombre.edad< 50"> - Hijos</span>-->
+            </li>
+        </ul>
+        <h4>Promedio de Edad : {{sumarEdades}} años</h4>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="01.js"></script>
+
+</body>
+</html>
